@@ -8,4 +8,14 @@
   margin: 4rem auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.head-deatils{
+
+}
+.details{
+  position: absolute;
+  top: 100%;
+  left: 11%;
 }

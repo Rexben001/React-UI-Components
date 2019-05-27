@@ -8,7 +8,7 @@ import FooterComponent from './components/FooterComponents/Footer';
 const App = () => {
   return (
     <div className='container'>
-      <HeaderComponent />
+      <HeaderComponent className='head-deatils'/>
       <div className='details'>
       <CardComponent />
       <FooterComponent />

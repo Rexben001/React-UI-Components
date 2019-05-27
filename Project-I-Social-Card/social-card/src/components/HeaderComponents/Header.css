@@ -13,14 +13,14 @@
     flex-direction: column;
     width: 90%;
     padding: 0;
-    padding-left: 1rem;
+    padding-left: .8rem;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
-.HeaderContent{
-    padding-top: 0;
-    margin-block-end: 0;
+.HeaderContent > p, .HeaderTitle > p{
+    padding-bottom: .8rem;
+    margin: 0;
 }
 
 span{
