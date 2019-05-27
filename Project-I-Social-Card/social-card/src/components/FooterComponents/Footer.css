@@ -1,0 +1,9 @@
+.Footer{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Footer > p{
+    color: grey;
+}
