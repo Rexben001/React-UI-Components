@@ -27,3 +27,8 @@
 .link{
     color: grey;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
