@@ -12,10 +12,10 @@
 }
 
 .CardContent{
-    border: 1px solid grey;
+    border: 1px solid rgb(168, 168, 168);
     margin-top: 0px;
     padding: 1rem;
-    /* width: 70%; */
+    border-radius: 0 0 5px 5px;
 }
 
 .link{
