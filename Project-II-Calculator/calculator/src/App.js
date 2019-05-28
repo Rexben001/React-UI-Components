@@ -8,57 +8,53 @@ import NumberComponent from "./components/ButtonComponents/NumberButton";
 
 class App extends Component {
   state = {
-    total: 0
+    saveInput: '0'
   }
 
-  buttonClicked = (event) => {
-    if (this.state.total === 0)
-    {
-      this.setState({total: event.target.textContent })
-    } else
-    {
-      this.setState({total: `${this.state.total} ${event.target.textContent}`})
-    }
-    if (event.target.textContent === '=')
-    {
-      const displayValue = this.state.total;
-      const value = displayValue.split(' ').map((val, idx) => {
-        if (val === 'X')
-        {
-          return displayValue[idx - 1] * displayValue[idx + 1]
-        }
-        // Number(val)
-      });
-      console.log(value);
-    }
+  buttonClicked = (num) => {
+    this.setState({saveInput: `${this.state.saveInput}${num}`})
   }
-  
+
+  equalButton = () => {
+    let total = this.state.saveInput;
+    if (total.charAt(0) === '0')
+    {
+      total = total.substr(1);
+          this.setState({ saveInput: eval(total) });
+    }
+    this.setState({ saveInput: eval(total) });
+  }
+
+  clearTotal = () => {
+    this.setState({ saveInput: '0' });
+  }
+
   render() {
     return (
       <div className="App">
         <HeaderComponent headStyle="head-style" text="7"/>
-        <DisplayComponent buttonStyle="display-style" total={this.state.total} text="0" />
+        <DisplayComponent buttonStyle="display-style" total={this.state.saveInput} text="0" />
         <div className="action-number">
-          <ActionComponent buttonStyle="action-button clear" text="clear" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button red" text="÷" click={this.buttonClicked}/>
+          <ActionComponent buttonStyle="action-button clear" text="clear" click={this.clearTotal}/>
+          <NumberComponent buttonStyle="number-button red" text="÷" click={()=>this.buttonClicked('/')}/>
         </div>
         <div>
-          <NumberComponent buttonStyle="number-button" text="7" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="8" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="9" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button red" text="X" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="4" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="5" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="6" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button red" text="–" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="1" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="2" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button" text="3" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button red" text="+" click={this.buttonClicked}/>
+          <NumberComponent buttonStyle="number-button" text="7" click={()=>this.buttonClicked(7)}/>
+          <NumberComponent buttonStyle="number-button" text="8" click={()=>this.buttonClicked(8)}/>
+          <NumberComponent buttonStyle="number-button" text="9" click={()=>this.buttonClicked(9)}/>
+          <NumberComponent buttonStyle="number-button red" text="X" click={()=>this.buttonClicked('*')}/>
+          <NumberComponent buttonStyle="number-button" text="4" click={()=>this.buttonClicked(4)}/>
+          <NumberComponent buttonStyle="number-button" text="5" click={()=>this.buttonClicked(5)}/>
+          <NumberComponent buttonStyle="number-button" text="6" click={()=>this.buttonClicked(6)}/>
+          <NumberComponent buttonStyle="number-button red" text="–" click={()=>this.buttonClicked('-')}/>
+          <NumberComponent buttonStyle="number-button" text="1" click={()=>this.buttonClicked(1)}/>
+          <NumberComponent buttonStyle="number-button" text="2" click={()=>this.buttonClicked(2)}/>
+          <NumberComponent buttonStyle="number-button" text="3" click={()=>this.buttonClicked(3)}/>
+          <NumberComponent buttonStyle="number-button red" text="+" click={()=>this.buttonClicked('+')}/>
         </div>
         <div className="action-number">
-          <ActionComponent buttonStyle="action-button" text="0" click={this.buttonClicked}/>
-          <NumberComponent buttonStyle="number-button red" text="=" click={this.buttonClicked}/>
+          <ActionComponent buttonStyle="action-button" text="0" click={()=>this.buttonClicked(0)}/>
+          <NumberComponent buttonStyle="number-button red" text="=" click={this.equalButton}/>
         </div>
       </div>
     );
