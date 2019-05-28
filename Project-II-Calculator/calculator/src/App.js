@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='App'>
       <DisplayComponent buttonStyle='display-style' text='0'/>
-      <ActionComponent text='clear'/>
+      <ActionComponent  buttonStyle='action-button clear' text='clear'/>
       <NumberComponent text={<i class="fas fa-divide"></i>}/>
       <ActionComponent text='0'/>
     </div>

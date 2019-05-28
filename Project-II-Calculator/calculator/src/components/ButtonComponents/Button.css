@@ -1,0 +1,11 @@
+.action-button{
+    width: 75%;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid grey;
+    font-size: 2rem;
+}
+
+.clear{
+    font-family: 'Open Sans', sans-serif;
+}
