@@ -1,11 +1,42 @@
+button{
+    margin: 0;
+    outline: 0;
+    border: solid 1px grey;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(212, 211, 211);
+    color: white;
+    box-shadow: 0 2px 2px white;
+}
 .action-button{
     width: 75%;
+    height: 70px;
     padding: 1rem;
     background-color: white;
-    border: 1px solid grey;
     font-size: 2rem;
 }
 
 .clear{
     font-family: 'Open Sans', sans-serif;
+    /* border-right: solid 1px grey; */
+}
+
+.number-button{
+    width: 25%;
+    height: 70px;
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.red{
+    background-color: rgb(175, 4, 4);
+    color: white;
+}
+
+.red:hover{
+    background-color: rgb(70, 4, 4);
+    color: white;
 }
