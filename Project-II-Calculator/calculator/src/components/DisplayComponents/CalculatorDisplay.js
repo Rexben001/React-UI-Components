@@ -2,7 +2,7 @@ import React from 'react';
 import './Display.css';
 
 const CalculatorDisplay = (props) => (
-    <button className={props.buttonStyle}>{props.text}</button>
+    <div className={props.buttonStyle}>{props.text}</div>
 );
 
 export default CalculatorDisplay;

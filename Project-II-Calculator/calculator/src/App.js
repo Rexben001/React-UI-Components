@@ -7,10 +7,11 @@ import NumberComponent from './components/ButtonComponents/NumberButton';
 
 const App = () => {
   return (
-    <div>
-      <DisplayComponent />
-      <ActionComponent />
-      <NumberComponent />
+    <div className='App'>
+      <DisplayComponent buttonStyle='display-style' text='0'/>
+      <ActionComponent text='clear'/>
+      <NumberComponent text={<i class="fas fa-divide"></i>}/>
+      <ActionComponent text='0'/>
     </div>
   );
 };
