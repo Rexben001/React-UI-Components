@@ -1,1 +1,29 @@
 /* All styles for your header Components live here */
+
+.HeaderComponent{
+    width: 100%;
+    display: flex;
+}
+.header-img{
+     width: 10%;
+     height:40%;
+}
+.HeaderDetails{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+    padding-left: .8rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.HeaderContent > p, .HeaderTitle > p{
+    padding-bottom: .8rem;
+    margin: 0;
+}
+
+span{
+color: grey;
+}
+
