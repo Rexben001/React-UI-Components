@@ -1,0 +1,13 @@
+.head-style{
+    margin: 1rem auto;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+    padding: .5rem;
+}
+
+.head-style span{
+    background-color: white;
+    color: red;
+    padding: .2rem;
+}

@@ -1,0 +1,9 @@
+.display-style{
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgb(8, 17, 10);
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: .8rem;
+    font-size: 3rem;
+}
